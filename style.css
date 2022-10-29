@@ -1,0 +1,133 @@
+:root{
+    --bg-color:#333;
+    --wihte-color:#fff;
+    --mainColor: #6195ff;
+    --bg-btn-color:#e9e9e9;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    background-color: #222;
+    width: 80vw;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+/*Start_Img_Sction */
+.img{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.img-box img,canvas{
+    max-width: 50vw;
+    max-height: 60vh;
+    border-radius: 15px;
+}
+.upload input{
+    display: none;
+}
+.upload label{
+    color:green;
+    font-size: 150%;
+    border: 2.5px green dashed;
+    padding: 0.3em 0.5em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}.upload label:hover{
+    color: var(--mainColor);
+    border: 2.5px var(--mainColor) dashed;
+}
+/*./End_Img_Sction */
+/*Start_Filters_Sction */
+.filters ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    direction: rtl;
+    position: relative;
+}
+
+.filters ul li{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+.filters ul li label{
+    padding: 5px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: var(--wihte-color);
+}
+.filters ul li input{
+    width: 15em;
+}
+.filters ul li:last-child{
+    flex-direction: row;
+    gap:1em;
+}
+/* __Buttons__ */
+.filters ul li:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+.download,
+.download + a{
+    color: var(--wihte-color);
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+    background-color:green;
+}
+.download{
+    margin-left: 5px;
+}
+.download:hover{
+    background-color: var(--bg-btn-color);
+    color:var(--mainColor) ;
+}
+.download + a:hover{
+    color: var(--bg-btn-color);
+    background-color:var(--mainColor) ;
+}
+/*./End_Filters_Sction */
+/* maida */
+@media (max-width: 650px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+    .filters ul{
+        gap: 2em;
+        padding: 1.2em;
+    }
+    .img-box img,canvas{
+        max-width: 70vw;
+    }
+}
